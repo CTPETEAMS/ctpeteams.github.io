@@ -808,6 +808,10 @@
       @keyframes xfade{0%{opacity:0}4%{opacity:1}16%{opacity:1}20%{opacity:0}100%{opacity:0}}
       .xfade-hero .xfade-cap{background:var(--surface); border-top:1px solid var(--border-soft); padding:10px; font-size:13.5px; color:var(--text-2); line-height:1.45}
       .xfade-hero .xfade-cap b{color:var(--heading)}
+      /* Mobile: taller stage so the crossfade is actually visible */
+      @media (max-width:700px){
+        .xfade-hero .xfade-stage{aspect-ratio:16/9}
+      }
 
       /* Featured artist */
       .artist-img{width:100%; height:auto; display:block; border:1px solid var(--border-faint)}
