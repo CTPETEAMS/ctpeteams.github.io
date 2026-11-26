@@ -915,6 +915,9 @@
       .eco .cell{border:1px solid var(--border-faint); background:var(--blue-wash); padding:10px}
       .eco .cell b{font-family:Tahoma,Verdana,sans-serif; color:var(--heading); display:block; font-size:13.5px; margin-bottom:3px}
       .eco .cell span{font-size:12px; color:var(--text-2)}
+      .eco .cell a{color:var(--link); text-decoration:underline}
+      .eco .cell a:hover{color:var(--link-hover)}
+      .eco .cell a b{color:inherit}
 
       /* Phases */
       .phases{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px}
