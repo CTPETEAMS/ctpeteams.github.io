@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+<div class="wrap">
+{{ partial "header.html" . }}
+{{ block "main" . }}{{ end }}
+{{ partial "footer.html" . }}
+</div>
+{{ partial "scripts.html" . }}
+</body>
+</html>

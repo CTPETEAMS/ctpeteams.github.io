@@ -1,0 +1,248 @@
+{{ define "main" }}
+<div class="layout" id="top">
+{{ partial "sidebar-left.html" . }}
+<main class="col col-center">
+<div class="hero">
+            <img src="assets/branding/ctpeteams-cover.jpg" alt="CTPETEAMS — Higher Team Management via C-domain" width="1128" height="191" />
+          </div>
+          <div class="hero-strip">
+            <span class="hs-text">Higher Team Management via C-domain — the dashboard where CTP gets built, together.</span>
+            <span style="margin-left:auto; display:flex; gap:8px; flex-wrap:wrap">
+              <a class="btn btn-primary" href="#dashboard">Open the prototype</a>
+              <a class="btn" href="https://linkedin.com/showcase/ctpeteams" target="_blank" rel="noopener">LinkedIn</a>
+            </span>
+          </div>
+
+          <section class="block" aria-label="Welcome">
+            <div class="block-title">CTPETEAMS — Higher Team Management via C-domain</div>
+            <div class="block-body">
+              <h2 class="sec">Our version of project management software</h2>
+              <p>Not another Asana, not another Trello. A dashboard built the CTP way, for how CTP work actually happens — teams, tasks, and the energy moving through a project.</p>
+              <div class="proto-hero">
+                <img src="assets/branding/ctpeteams-triangle-hires.jpg" alt="CTPETEAMS — four glowing figures inside a neon triangle: one above, three below — the team, held in one shape" width="1024" height="1024" />
+                <div>
+                  <p><b>The problem it solves.</b> One person can't spearhead every aspect of a project. Take an underground industrial band: one person writing, recording, mixing, the artwork, promoting the release, booking the shows. It doesn't work. The project stalls — not because the vision is weak, but because one person can't carry it all. CTPETEAMS is how you bring the other people in.</p>
+                  <p><b>The principle.</b> The CTP energy and archetypes are the organizing layer, not decoration. Every person on a team holds a mission role, and that role is governed by their energy type. You don't just see tasks. You see the energy of the project — because in CTP, the energy is the work.</p>
+                  <p class="small muted">Sample data below — the band example from the spec, plus the CTPVerse projects CTPETEAMS will run. Energy types are Resofactor's call; the prototype shows where each person's energy type sits.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <a href="https://ctp-eos.github.io/" target="_blank" rel="noopener" class="ctpeos-banner" aria-label="CTP-EOS — The Operating System, Digital Gateway to the CTPVerse">
+            <img src="assets/ctp-eos/ctp-eos-horz-banner.jpg" alt="CTP-EOS — The Operating System, Digital Gateway to the CTPVerse" width="2048" height="512" loading="lazy" style="display:block;width:100%;height:auto" />
+          </a>
+
+          <div class="proto-tabs" role="tablist" aria-label="Prototype views">
+            <button type="button" class="proto-tab is-active" data-view-tab="dashboard" role="tab" aria-selected="true">Dashboard</button>
+            <button type="button" class="proto-tab" data-view-tab="board" role="tab" aria-selected="false">Project Board</button>
+            <button type="button" class="proto-tab" data-view-tab="team" role="tab" aria-selected="false">Team View</button>
+            <button type="button" class="proto-tab" data-view-tab="task" role="tab" aria-selected="false">Task View</button>
+            <button type="button" class="proto-tab" data-view-tab="energy" role="tab" aria-selected="false">Energy View</button>
+          </div>
+          <p class="small muted proto-note">Clickable prototype — Phase 2. No login, no backend, sample data. Click a view above, or a task card on the board to open it in the Task View.</p>
+
+          <section class="block proto-view is-active" id="dashboard" aria-label="Dashboard — all projects at a glance">
+            <div class="block-title">Dashboard — All Projects at a Glance</div>
+            <div class="block-body">
+              <h2 class="sec">The whole CTPVerse, in one place</h2>
+              <p>Every project CTPETEAMS runs — the band's release, and every CTPVerse initiative — with its status and its energy flow at a glance. People move between projects, and the energy of one can feed the next.</p>
+              <div class="eco" style="margin-top:10px">
+                <div class="cell"><b>The Release — underground industrial band</b><span>Featured project · 9 tasks · 2 blocked · Energy: blocked in Booking</span></div>
+                <div class="cell"><b>CTP-EOS</b><span>The disclosure Linux · Live · Energy: flowing</span></div>
+                <div class="cell"><b>FIN-DSP</b><span>Audio software hub · Live · Energy: flowing</span></div>
+                <div class="cell"><b>CTP Magazine</b><span>News &amp; disclosure · Live · Energy: flowing</span></div>
+                <div class="cell"><b>CTP Music Portal</b><span>Many genres · Live · Energy: flowing</span></div>
+                <div class="cell"><b>CTP Space Systems</b><span>CTP-capable craft · Live · Energy: flowing</span></div>
+                <div class="cell"><b>CTPVerse Dashboard</b><span>The front door · Live · Energy: flowing</span></div>
+                <div class="cell"><b>CTP-PSY</b><span>Psytrance portal · Live, alpha · Energy: flowing</span></div>
+                <div class="cell"><b>Disclosure movement</b><span>Many people, many projects · In progress · Energy: flowing</span></div>
+              </div>
+              <p class="small muted" style="margin-top:8px">Sample data — project statuses are the prototype's starting point, to be set live when the working app lands.</p>
+            </div>
+          </section>
+
+          <section class="block proto-view" id="board" aria-label="Project Board — The Release">
+            <div class="block-title">Project Board — The Release</div>
+            <div class="block-body">
+              <h2 class="sec">The band's release, on a board</h2>
+              <p>One project, four columns. A blocked card is a blocked energy flow, not just a late task. Click any card to open it in the Task View.</p>
+              <div class="board">
+                <div class="board-col">
+                  <div class="board-col-head">To do <span class="board-count">2</span></div>
+                  <div class="task-card" data-task="t3"><b>Write the closing track</b><span>Alex · Writing</span><span class="pill pill-flow">Flowing</span></div>
+                  <div class="task-card" data-task="t6"><b>Design the release poster</b><span>Max · Artwork</span><span class="pill pill-flow">Flowing</span></div>
+                </div>
+                <div class="board-col">
+                  <div class="board-col-head">In progress <span class="board-count">3</span></div>
+                  <div class="task-card" data-task="t4"><b>Record the rhythm tracks</b><span>Sam · Recording</span><span class="pill pill-flow">Flowing</span></div>
+                  <div class="task-card" data-task="t5"><b>Mix track 3 — “Static Bloom”</b><span>Jo · Mixing</span><span class="pill pill-flow">Flowing</span></div>
+                  <div class="task-card" data-task="t7"><b>Promote the single</b><span>Rin · Promotion</span><span class="pill pill-stalled">Stalled</span></div>
+                </div>
+                <div class="board-col">
+                  <div class="board-col-head">Blocked <span class="board-count">2</span></div>
+                  <div class="task-card" data-task="t8"><b>Master the album</b><span>Jo · Mixing</span><span class="pill pill-blocked">Blocked</span></div>
+                  <div class="task-card" data-task="t9"><b>Book the release shows</b><span>Kit · Booking shows</span><span class="pill pill-blocked">Blocked</span></div>
+                </div>
+                <div class="board-col">
+                  <div class="board-col-head">Done <span class="board-count">2</span></div>
+                  <div class="task-card" data-task="t1"><b>Write the opening track</b><span>Alex · Writing</span><span class="pill pill-flow">Flowing</span></div>
+                  <div class="task-card" data-task="t2"><b>Record the vocals</b><span>Sam · Recording</span><span class="pill pill-flow">Flowing</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="block proto-view" id="team" aria-label="Team View — The Release">
+            <div class="block-title">Team View — The Release</div>
+            <div class="block-body">
+              <h2 class="sec">The people, and what each one carries</h2>
+              <p>Every person on the team: their mission role, their energy type, and what they are carrying. This is the view that makes it obvious when a new collaborator is needed — and in which role.</p>
+              <div class="before-after">
+                <div class="ba-cell ba-before"><b>Before — one person, everything</b><span>The founder: writing, recording, mixing, artwork, promoting, booking the shows. Six jobs, one person. Energy: blocked. The project stalls.</span></div>
+                <div class="ba-cell ba-after"><b>After — six people, one job each</b><span>Each piece held by a person in the mission role that matches their energy type. The work is shared, and the energy flows.</span></div>
+              </div>
+              <div class="team-wrap">
+              <table class="team-table">
+                <thead><tr><th>Person</th><th>Mission role</th><th>Energy type</th><th>Carrying</th><th>Energy</th></tr></thead>
+                <tbody>
+                  <tr><td>Alex</td><td>Writing</td><td class="muted">To be named</td><td>Write the opening track · Write the closing track</td><td><span class="pill pill-flow">Flowing</span></td></tr>
+                  <tr><td>Sam</td><td>Recording</td><td class="muted">To be named</td><td>Record the vocals · Record the rhythm tracks</td><td><span class="pill pill-flow">Flowing</span></td></tr>
+                  <tr><td>Jo</td><td>Mixing</td><td class="muted">To be named</td><td>Mix track 3 · Master the album</td><td><span class="pill pill-blocked">Blocked</span></td></tr>
+                  <tr><td>Max</td><td>Artwork</td><td class="muted">To be named</td><td>Design the release poster</td><td><span class="pill pill-flow">Flowing</span></td></tr>
+                  <tr><td>Rin</td><td>Promotion</td><td class="muted">To be named</td><td>Promote the single</td><td><span class="pill pill-stalled">Stalled</span></td></tr>
+                  <tr><td>Kit</td><td>Booking shows</td><td class="muted">To be named</td><td>Book the release shows</td><td><span class="pill pill-blocked">Blocked</span></td></tr>
+                </tbody>
+              </table>
+              </div>
+              <p class="small muted" style="margin-top:8px">Sample data — names are placeholders for the prototype. Energy types are Resofactor's call; the column shows where each person's energy type sits.</p>
+            </div>
+          </section>
+
+          <section class="block proto-view" id="task" aria-label="Task View">
+            <div class="block-title">Task View</div>
+            <div class="block-body">
+              <h2 class="sec" id="taskTitle">Book the release shows</h2>
+              <p id="taskDesc">The release shows — the rooms, the dates, the bill. Kit holds the booking role, but the venue list is not confirmed yet.</p>
+              <div class="task-detail">
+                <div><b>Owner</b><span id="taskOwner">Kit</span></div>
+                <div><b>Mission role</b><span id="taskRole">Booking shows</span></div>
+                <div><b>Energy type</b><span id="taskEnergyType">Energy type: to be named by Resofactor</span></div>
+                <div><b>Status</b><span class="pill pill-blocked" id="taskStatus">Blocked</span></div>
+                <div><b>Energy</b><span class="pill pill-blocked" id="taskEnergy">Blocked</span></div>
+                <div><b>On the board</b><span id="taskBoard">Blocked column</span></div>
+                <div><b>In the flow</b><span id="taskFlow">Booking workstream — blocked</span></div>
+              </div>
+              <p style="margin-top:10px"><b>What's blocking it:</b> <span id="taskBlock">Blocked: the venue list is not confirmed. Kit needs the promoter's venue contacts to lock the dates — that is the blockage in the flow.</span></p>
+              <p class="small muted">Click any card on the <a href="#board">Project Board</a> to open that task here.</p>
+            </div>
+          </section>
+
+          <section class="block proto-view" id="energy" aria-label="Energy View — The Release">
+            <div class="block-title">Energy View — The Release</div>
+            <div class="block-body">
+              <h2 class="sec">Where the project has momentum — and where it's stuck</h2>
+              <p>Energy by workstream. A stall shows up as a blockage in the flow, not just a red date. This is the view no other project tool has — the CTP difference.</p>
+              <div class="flow-list">
+                <div class="flow-row"><span class="flow-name">Writing</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
+                <div class="flow-row"><span class="flow-name">Recording</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
+                <div class="flow-row"><span class="flow-name">Mixing</span><span class="flow-bar"><span class="flow-fill flow-blocked" style="width:55%"></span></span><span class="pill pill-blocked">Blocked</span></div>
+                <div class="flow-row"><span class="flow-name">Artwork</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
+                <div class="flow-row"><span class="flow-name">Promotion</span><span class="flow-bar"><span class="flow-fill flow-stalled" style="width:30%"></span></span><span class="pill pill-stalled">Stalled</span></div>
+                <div class="flow-row"><span class="flow-name">Booking</span><span class="flow-bar"><span class="flow-fill flow-blocked" style="width:15%"></span></span><span class="pill pill-blocked">Blocked</span></div>
+              </div>
+              <p style="margin-top:10px"><b>Where it's stuck:</b> Booking is blocked — the venue list is not confirmed. Mixing is blocked behind it — the master waits on the final mixes. Promotion is stalled — the single can't go out until the master lands. One blockage in Booking is holding three workstreams. Clear Booking, and the energy flows again.</p>
+            </div>
+          </section>
+
+          <section class="block" id="how" aria-label="How it works">
+            <div class="block-title">How It Works</div>
+            <div class="block-body">
+              <h2 class="sec">The problem, and the fix</h2>
+              <p>Regular project software tracks tasks and deadlines. CTPETEAMS tracks the team and the energy behind the work — because in CTP, the energy is the work.</p>
+              <div class="eco" style="margin-top:10px">
+                <div class="cell"><b>1 · The project</b><span>Every project gets a dashboard — the work, the people, and the energy flowing through it, all in one place.</span></div>
+                <div class="cell"><b>2 · The team</b><span>Every person holds a mission role, governed by their energy type. The energy-type architectures organize the team.</span></div>
+                <div class="cell"><b>3 · The board</b><span>The work — what's in progress, what's done, what's blocked. A blocked card is a blocked energy flow.</span></div>
+                <div class="cell"><b>4 · The energy</b><span>The flow — where the project has momentum and where it's stuck. Clear the blockage, and the energy flows again.</span></div>
+              </div>
+              <h3 class="sub">What it is not</h3>
+              <ul style="margin:0; padding-left:17px">
+                <li><b>Not Matty Jacks' ctpdemo.</b> That was a console/showcase walkthrough. CTPETEAMS is the team management dashboard — the board, the team, the tasks, the energy — not a showcase.</li>
+                <li><b>Not an Asana/Trello clone.</b> Task tracking is the floor, not the product. The product is the team and the energy behind the work.</li>
+                <li><b>Not a static site.</b> This portal is the clickable prototype. The working app runs real teams on real data.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="block" id="ecosystem" aria-label="Ecosystem and architecture">
+            <div class="block-title">The Ecosystem &amp; The Stack</div>
+            <div class="block-body">
+              <h2 class="sec">One layer of the CTP stack</h2>
+              <p>CTPETEAMS is the top layer of the CTP Energy ecosystem — the team operating system interface layer. CTPESWG builds the core architecture, CTP-EOS runs it, CTPETEAMS delivers it.</p>
+              <img class="eco-img" src="assets/branding/ctp-energy-ecosystem-architecture.jpg" alt="CTP Energy Ecosystem Architecture — a designed stack, one integrated system: CTPESWG core architecture at the foundation, CTP-EOS Linux as the operating environment, CTPETEAMS as the team operating system interface layer" width="800" height="533" loading="lazy" />
+              <h3 class="sub">What it will run</h3>
+              <div class="eco" style="margin-top:10px">
+                <div class="cell"><b>CTP-EOS</b><span>The disclosure Linux</span></div>
+                <div class="cell"><b>FIN-DSP</b><span>Audio software hub</span></div>
+                <div class="cell"><b>CTP Magazine</b><span>News &amp; disclosure</span></div>
+                <div class="cell"><b>CTP Music Portal</b><span>Many genres</span></div>
+                <div class="cell"><b>CTP Space Systems</b><span>CTP-capable craft</span></div>
+                <div class="cell"><b>CTPVerse Dashboard</b><span>The front door</span></div>
+                <div class="cell"><b>CTP-PSY</b><span>Psytrance portal</span></div>
+                <div class="cell"><b>Disclosure movement</b><span>Many people, many projects, moving as one</span></div>
+              </div>
+              <p style="margin-top:8px">One system, one way of working, everywhere CTP is built — so people can move between projects, and the energy of one can feed the next.</p>
+            </div>
+          </section>
+
+          <section class="block" id="roadmap" aria-label="Roadmap">
+            <div class="block-title">Roadmap</div>
+            <div class="block-body">
+              <div class="phases">
+                <div class="phase"><b>Phase 1 — Spec</b>Done.<ul><li>Five views defined</li><li>Data model set</li><li>Band example as the worked example</li></ul></div>
+                <div class="phase"><b>Phase 2 — Prototype</b>This portal.<ul><li>Clickable prototype, sample data</li><li>Five views, no backend</li><li>GitHub Pages portal</li></ul></div>
+                <div class="phase"><b>Phase 3 — Working app</b>After a job lands.<ul><li>Vercel back end + Supabase</li><li>One Club CTP login</li><li>Real teams, real projects, real energy flow</li></ul></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="block" id="club" aria-label="Club CTP membership">
+            <div class="block-title">Club CTP — Membership</div>
+            <div class="block-body">
+              <h2 class="sec">Listeners → Members → Participants → Contributors</h2>
+              <p>Club CTP is the membership and identity layer connecting the whole CTP ecosystem — and the working CTPETEAMS app will use one Club CTP login. The portal comes first and the Marketplace later: community first, commerce second.</p>
+              <div class="tiers-row">
+                <div class="tier"><h3>Explorer</h3><div class="price">Free</div><p class="small muted">Entry point into the CTP ecosystem.</p><ul><li>Public access</li><li>Community discovery</li><li>Basic content access</li></ul></div>
+                <div class="club-banner">
+                  <div class="cb-title">One membership across the whole CTP ecosystem</div>
+                  <p>Listeners become Members, Members become Participants, Participants become Contributors. Club CTP is the identity layer that carries that journey across CTP Music, CTP-PSY, CTP University and CTP-EOS — under one membership.</p>
+                  <p class="cb-line">Community first, commerce second — the portal comes first, the Marketplace later.</p>
+                </div>
+              </div>
+              <div class="tiers-row">
+                <div class="tier"><h3>Member</h3><span class="metal metal-bronze">Bronze</span><div class="price">$5<span> /mo · $50/yr</span></div><p class="small muted">Standard community membership.</p><ul><li>Expanded content access</li><li>Member channels</li><li>Community participation</li><li>Special announcements</li></ul></div>
+                <div class="tier"><h3>Premium</h3><span class="metal metal-silver">Silver</span><div class="price">$15<span> /mo · $150/yr</span></div><p class="small muted">Dedicated supporters.</p><ul><li>Exclusive releases</li><li>Premium audio libraries</li><li>Private experiences</li><li>Early access content</li></ul></div>
+                <div class="tier"><h3>Patron</h3><span class="metal metal-gold">Gold</span><div class="price">$50<span> /mo · $500/yr</span></div><p class="small muted">High-value supporters and ecosystem participants.</p><ul><li>Priority access</li><li>Recognition</li><li>Special releases</li><li>Premium community experiences</li></ul></div>
+                <div class="tier"><h3>Founder's Circle</h3><span class="metal metal-platinum">Platinum</span><div class="price">Custom</div><p class="small muted">Strategic supporters of the CTP ecosystem.</p><ul><li>Recognition</li><li>Exclusive access</li><li>Private opportunities</li><li>Long-term ecosystem participation</li></ul></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="block" aria-label="Go deeper">
+            <div class="block-title">Go Deeper</div>
+            <div class="block-body">
+              <p>This is the operating layer for the CTPVerse. The dashboard where CTP gets built, by the people building it, together.</p>
+              <ul style="margin:0; padding-left:17px">
+                <li><a href="#dashboard">The Dashboard</a> — every project CTPETEAMS runs, at a glance.</li>
+                <li><a href="#board">The Project Board</a> — the band's release, on a board. Click a card to open it.</li>
+                <li><a href="#energy">The Energy View</a> — where the project flows and where it's stuck.</li>
+                <li><a href="https://linkedin.com/showcase/ctpeteams" target="_blank" rel="noopener">CTPETEAMS on LinkedIn</a> — the showcase page.</li>
+                <li><a href="https://ctpverse.github.io/" target="_blank" rel="noopener">CTPVerse Dashboard</a> — the front door to the CTPVerse.</li>
+              </ul>
+            </div>
+          </section>
+</main>
+{{ partial "sidebar-right.html" . }}
+</div>
+{{ end }}

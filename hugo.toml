@@ -1,0 +1,15 @@
+baseURL = "https://ctpeteams.github.io/"
+title = "CTPETEAMS"
+languageCode = "en"
+enableRobotsTXT = true
+
+# No taxonomies are used on this site. Single page.
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    # Raw HTML inside markdown must pass through unchanged.
+    unsafe = true
+  [markup.goldmark.renderer]
+    # Keep heading IDs stable for anchor links.
+    unsafe = true
