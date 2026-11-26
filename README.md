@@ -53,9 +53,6 @@ it does not invent the taxonomy. Names in the sample team are placeholders.
 
 ## Notes
 
-- This is NOT Matty Jacks' ctpdemo (a console/showcase walkthrough). CTPETEAMS
-  is the team management dashboard front-end — the board, the team, the tasks,
-  the energy.
 - Branding images come from the CTPETEAMS LinkedIn showcase page posts:
   the neon-triangle artwork (`ctpeteams-triangle-hires.jpg`), the wide cover
   banner (`ctpeteams-cover.jpg`), the square logo (`ctpeteams-logo-400.jpg`,
