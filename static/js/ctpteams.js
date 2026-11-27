@@ -90,21 +90,30 @@
     });
   });
 
-  /* ----- Hero: random loader + random rotator -----
-     No fixed order. On every page load a random slide is shown first,
-     then every 5s a random different slide crossfades in. */
+  /* ----- Hero: random loader + staggered rotator -----
+     Natural (human) and abstract (CG) slides interchange — never two of
+     the same kind in a row. On every page load a random slide is shown
+     first, then every 5s a random slide of the opposite kind crossfades in. */
   var heroImgs = document.querySelectorAll('.xfade-stage img');
   if(heroImgs.length > 1){
-    var current = Math.floor(Math.random() * heroImgs.length);
-    heroImgs[current].classList.add('is-active');
+    var naturals = [], abstracts = [];
+    heroImgs.forEach(function(img){
+      (img.getAttribute('data-kind') === 'natural' ? naturals : abstracts).push(img);
+    });
+    var current = heroImgs[Math.floor(Math.random() * heroImgs.length)];
+    current.classList.add('is-active');
+    var nextKind = current.getAttribute('data-kind') === 'natural' ? 'abstract' : 'natural';
     setInterval(function(){
+      var pool = nextKind === 'natural' ? naturals : abstracts;
+      if(!pool.length) pool = nextKind === 'natural' ? abstracts : naturals;
       var next = current;
-      while(next === current){
-        next = Math.floor(Math.random() * heroImgs.length);
+      while(next === current && pool.length > 1){
+        next = pool[Math.floor(Math.random() * pool.length)];
       }
-      heroImgs[current].classList.remove('is-active');
-      heroImgs[next].classList.add('is-active');
+      current.classList.remove('is-active');
+      next.classList.add('is-active');
       current = next;
+      nextKind = nextKind === 'natural' ? 'abstract' : 'natural';
     }, 5000);
   } else if(heroImgs.length === 1){
     heroImgs[0].classList.add('is-active');
