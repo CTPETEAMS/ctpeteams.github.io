@@ -1307,3 +1307,8 @@
         .task-detail{grid-template-columns:1fr}
         .flow-row{grid-template-columns:90px 1fr auto}
       }
+
+      @media (max-width: 720px) {
+        /* Mobile nav: let the bar wrap to two rows so nothing is cut off. */
+        .nav-strip { flex-wrap: wrap; min-width: 0; }
+      }
