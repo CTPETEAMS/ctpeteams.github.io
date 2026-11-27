@@ -89,4 +89,24 @@
       if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); showTask(card.getAttribute('data-task')); }
     });
   });
+
+  /* ----- Hero: random loader + random rotator -----
+     No fixed order. On every page load a random slide is shown first,
+     then every 5s a random different slide crossfades in. */
+  var heroImgs = document.querySelectorAll('.xfade-stage img');
+  if(heroImgs.length > 1){
+    var current = Math.floor(Math.random() * heroImgs.length);
+    heroImgs[current].classList.add('is-active');
+    setInterval(function(){
+      var next = current;
+      while(next === current){
+        next = Math.floor(Math.random() * heroImgs.length);
+      }
+      heroImgs[current].classList.remove('is-active');
+      heroImgs[next].classList.add('is-active');
+      current = next;
+    }, 5000);
+  } else if(heroImgs.length === 1){
+    heroImgs[0].classList.add('is-active');
+  }
 })();
