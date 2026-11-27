@@ -88,7 +88,7 @@
             <div class="block-title">Project Board — Sample Project</div>
             <div class="block-body">
               <h2 class="sec">A sample project, on a board</h2>
-              <p>One project, four columns. A blocked card is a blocked energy flow, not just a late task. Click any card to open it in the Task View.</p>
+              <p>One project, three columns. Every card is moving — the energy flows through the board the way it flows through the team. Click any card to open it in the Task View.</p>
               <div class="board">
                 <div class="board-col">
                   <div class="board-col-head">To do <span class="board-count">2</span></div>
@@ -96,15 +96,12 @@
                   <div class="task-card" data-task="t6"><b>Prepare the launch materials</b><span>Max · Content</span><span class="pill pill-flow">Flowing</span></div>
                 </div>
                 <div class="board-col">
-                  <div class="board-col-head">In progress <span class="board-count">3</span></div>
+                  <div class="board-col-head">In progress <span class="board-count">5</span></div>
                   <div class="task-card" data-task="t4"><b>Develop the core features</b><span>Sam · Development</span><span class="pill pill-flow">Flowing</span></div>
                   <div class="task-card" data-task="t5"><b>Review the design draft</b><span>Jo · Design</span><span class="pill pill-flow">Flowing</span></div>
-                  <div class="task-card" data-task="t7"><b>Announce the launch</b><span>Rin · Marketing</span><span class="pill pill-stalled">Stalled</span></div>
-                </div>
-                <div class="board-col">
-                  <div class="board-col-head">Blocked <span class="board-count">2</span></div>
-                  <div class="task-card" data-task="t8"><b>Approve the final deliverable</b><span>Jo · Design</span><span class="pill pill-blocked">Blocked</span></div>
-                  <div class="task-card" data-task="t9"><b>Schedule the launch event</b><span>Kit · Operations</span><span class="pill pill-blocked">Blocked</span></div>
+                  <div class="task-card" data-task="t7"><b>Announce the launch</b><span>Rin · Marketing</span><span class="pill pill-flow">Flowing</span></div>
+                  <div class="task-card" data-task="t8"><b>Approve the final deliverable</b><span>Jo · Design</span><span class="pill pill-flow">Flowing</span></div>
+                  <div class="task-card" data-task="t9"><b>Schedule the launch event</b><span>Kit · Operations</span><span class="pill pill-flow">Flowing</span></div>
                 </div>
                 <div class="board-col">
                   <div class="board-col-head">Done <span class="board-count">2</span></div>
@@ -121,7 +118,7 @@
               <h2 class="sec">The people, and what each one carries</h2>
               <p>Every person on the team: their mission role, their energy type, and what they are carrying. This is the view that makes it obvious when a new collaborator is needed — and in which role.</p>
               <div class="before-after">
-                <div class="ba-cell ba-before"><b>Before — one person, everything</b><span>The founder: planning, building, designing, writing, promoting, scheduling the launch. Six jobs, one person. Energy: blocked. The project stalls.</span></div>
+                <div class="ba-cell ba-before"><b>Before — one person, everything</b><span>The founder: planning, building, designing, writing, promoting, scheduling the launch. Six jobs, one person. Energy: stretched thin. One person can't carry it all.</span></div>
                 <div class="ba-cell ba-after"><b>After — six people, one job each</b><span>Each piece held by a person in the mission role that matches their energy type. The work is shared, and the energy flows.</span></div>
               </div>
               <div class="team-wrap">
@@ -130,10 +127,10 @@
                 <tbody>
                   <tr><td>Alex</td><td>Planning</td><td class="muted">To be named</td><td>Define the project scope · Finalize the requirements</td><td><span class="pill pill-flow">Flowing</span></td></tr>
                   <tr><td>Sam</td><td>Development</td><td class="muted">To be named</td><td>Build the first prototype · Develop the core features</td><td><span class="pill pill-flow">Flowing</span></td></tr>
-                  <tr><td>Jo</td><td>Design</td><td class="muted">To be named</td><td>Review the design draft · Approve the final deliverable</td><td><span class="pill pill-blocked">Blocked</span></td></tr>
+                  <tr><td>Jo</td><td>Design</td><td class="muted">To be named</td><td>Review the design draft · Approve the final deliverable</td><td><span class="pill pill-flow">Flowing</span></td></tr>
                   <tr><td>Max</td><td>Content</td><td class="muted">To be named</td><td>Prepare the launch materials</td><td><span class="pill pill-flow">Flowing</span></td></tr>
-                  <tr><td>Rin</td><td>Marketing</td><td class="muted">To be named</td><td>Announce the launch</td><td><span class="pill pill-stalled">Stalled</span></td></tr>
-                  <tr><td>Kit</td><td>Operations</td><td class="muted">To be named</td><td>Schedule the launch event</td><td><span class="pill pill-blocked">Blocked</span></td></tr>
+                  <tr><td>Rin</td><td>Marketing</td><td class="muted">To be named</td><td>Announce the launch</td><td><span class="pill pill-flow">Flowing</span></td></tr>
+                  <tr><td>Kit</td><td>Operations</td><td class="muted">To be named</td><td>Schedule the launch event</td><td><span class="pill pill-flow">Flowing</span></td></tr>
                 </tbody>
               </table>
               </div>
@@ -145,17 +142,17 @@
             <div class="block-title">Task View</div>
             <div class="block-body">
               <h2 class="sec" id="taskTitle">Schedule the launch event</h2>
-              <p id="taskDesc">The launch event — the venue, the date, the agenda. Kit holds the operations role, but the venue is not confirmed yet.</p>
+              <p id="taskDesc">The launch event — the venue, the date, the agenda. Kit holds the operations role, and the venue is confirmed.</p>
               <div class="task-detail">
                 <div><b>Owner</b><span id="taskOwner">Kit</span></div>
                 <div><b>Mission role</b><span id="taskRole">Operations</span></div>
                 <div><b>Energy type</b><span id="taskEnergyType">Energy type: to be named by Resofactor</span></div>
-                <div><b>Status</b><span class="pill pill-blocked" id="taskStatus">Blocked</span></div>
-                <div><b>Energy</b><span class="pill pill-blocked" id="taskEnergy">Blocked</span></div>
-                <div><b>On the board</b><span id="taskBoard">Blocked column</span></div>
-                <div><b>In the flow</b><span id="taskFlow">Operations workstream — blocked</span></div>
+                <div><b>Status</b><span class="pill pill-flow" id="taskStatus">In progress</span></div>
+                <div><b>Energy</b><span class="pill pill-flow" id="taskEnergy">Flowing</span></div>
+                <div><b>On the board</b><span id="taskBoard">In progress column</span></div>
+                <div><b>In the flow</b><span id="taskFlow">Operations workstream — flowing</span></div>
               </div>
-              <p style="margin-top:10px"><b>What's blocking it:</b> <span id="taskBlock">Blocked: the venue is not confirmed. Kit needs the venue contacts to lock the date — that is the blockage in the flow.</span></p>
+              <p style="margin-top:10px"><b>Where it stands:</b> <span id="taskBlock">Nothing blocking it. In progress.</span></p>
               <p class="small muted">Click any card on the <a href="#board">Project Board</a> to open that task here.</p>
             </div>
           </section>
@@ -164,16 +161,16 @@
             <div class="block-title">Energy View — Sample Project</div>
             <div class="block-body">
               <h2 class="sec">Where the project has momentum — and where it's stuck</h2>
-              <p>Energy by workstream. A stall shows up as a blockage in the flow, not just a red date. This is the view no other project tool has — the CTP difference.</p>
+              <p>Energy by workstream. You see where the project has momentum, in real time, workstream by workstream. This is the view no other project tool has — the CTP difference.</p>
               <div class="flow-list">
                 <div class="flow-row"><span class="flow-name">Planning</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
                 <div class="flow-row"><span class="flow-name">Development</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
-                <div class="flow-row"><span class="flow-name">Design</span><span class="flow-bar"><span class="flow-fill flow-blocked" style="width:55%"></span></span><span class="pill pill-blocked">Blocked</span></div>
+                <div class="flow-row"><span class="flow-name">Design</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
                 <div class="flow-row"><span class="flow-name">Content</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
-                <div class="flow-row"><span class="flow-name">Marketing</span><span class="flow-bar"><span class="flow-fill flow-stalled" style="width:30%"></span></span><span class="pill pill-stalled">Stalled</span></div>
-                <div class="flow-row"><span class="flow-name">Operations</span><span class="flow-bar"><span class="flow-fill flow-blocked" style="width:15%"></span></span><span class="pill pill-blocked">Blocked</span></div>
+                <div class="flow-row"><span class="flow-name">Marketing</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
+                <div class="flow-row"><span class="flow-name">Operations</span><span class="flow-bar"><span class="flow-fill flow-flow" style="width:100%"></span></span><span class="pill pill-flow">Flowing</span></div>
               </div>
-              <p style="margin-top:10px"><b>Where it's stuck:</b> Operations is blocked — the venue is not confirmed. Design is blocked behind it — approval waits on the final review. Marketing is stalled — the announcement can't go out until the deliverable lands. One blockage in Operations is holding three workstreams. Clear Operations, and the energy flows again.</p>
+              <p style="margin-top:10px"><b>Where it's flowing:</b> Every workstream is moving — Planning, Development, Design, Content, Marketing, and Operations are all in progress and the energy is flowing through the whole project. This is the flow taking CTP out.</p>
             </div>
           </section>
 
@@ -185,8 +182,8 @@
               <div class="eco" style="margin-top:10px">
                 <div class="cell"><b>1 · The project</b><span>Every project gets a dashboard — the work, the people, and the energy flowing through it, all in one place.</span></div>
                 <div class="cell"><b>2 · The team</b><span>Every person holds a mission role, governed by their energy type. The energy-type architectures organize the team.</span></div>
-                <div class="cell"><b>3 · The board</b><span>The work — what's in progress, what's done, what's blocked. A blocked card is a blocked energy flow.</span></div>
-                <div class="cell"><b>4 · The energy</b><span>The flow — where the project has momentum and where it's stuck. Clear the blockage, and the energy flows again.</span></div>
+                <div class="cell"><b>3 · The board</b><span>The work — what's in progress, what's done, what's next. Every card shows where the energy is flowing.</span></div>
+                <div class="cell"><b>4 · The energy</b><span>The flow — where the project has momentum, workstream by workstream. When the energy is aligned, the whole project moves.</span></div>
               </div>
               <h3 class="sub">What it is not</h3>
               <ul style="margin:0; padding-left:17px">
