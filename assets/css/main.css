@@ -850,7 +850,7 @@
          Full removes the cap and widens both side columns to 280px */
       :root, :root[data-width="nuke"]{--page-max:1180px}
       :root[data-width="full"]{--page-max:none}
-      .wrap{max-width:var(--page-max); margin:0 auto; padding:8px}
+      .wrap{max-width:var(--page-max); margin:0 auto}
       @media (min-width:1081px){
         :root[data-width="full"] .layout{grid-template-columns:280px minmax(0,1fr) 280px}
       }
@@ -881,21 +881,22 @@
       /* Nav strip */
       .nav-strip{
         background:var(--nav-bg); border:1px solid var(--line); border-top:none;
-        display:flex; align-items:center; gap:2px; flex-wrap:wrap; padding:4px 8px;
+        display:flex; align-items:center; gap:0; flex-wrap:nowrap; padding:4px 8px;
       }
       .nav-strip a{
         color:#ffffff; font-weight:bold; font-size:12px; letter-spacing:.04em;
-        padding:8px 10px; display:inline-block; min-height:2.25rem; box-sizing:border-box;
+        padding:8px 5px; display:inline-block; min-height:2.25rem; box-sizing:border-box; flex:none; white-space:nowrap;
       }
       .nav-strip a:hover{color:#ffffff; background:rgba(255,255,255,.14); text-decoration:none}
-      .theme-pick{margin-left:0; display:flex; align-items:center; gap:8px; color:#ffffff; font-size:12px; padding:2px 0}
+      .theme-pick{margin-left:0; display:flex; align-items:center; gap:6px; color:#ffffff; font-size:12px; padding:2px 0; flex:none; min-width:0}
+      .theme-pick select{max-width:120px}
       .theme-pick select{
         background:var(--input-bg); color:var(--text); border:1px solid var(--border-soft);
-        font:inherit; font-size:12.5px; padding:4px 6px; max-width:230px;
+        font:inherit; font-size:12.5px; padding:4px 6px; max-width:120px;
       }
       /* Width toggle button — sits directly left of the theme picker,
          same control as the CTPVerse Dashboard */
-      .width-btn{margin-left:auto}
+      .width-btn{margin-left:auto; flex:none; padding:7px 10px}
 
       /* Three-column layout */
       .layout{display:grid; grid-template-columns:196px minmax(0,1fr) 252px; gap:10px; margin-top:10px; align-items:start}
