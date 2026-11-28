@@ -263,7 +263,7 @@
     --border-soft:#9db8cc; --border-faint:#d7e3ee; --input-bg:#ffffff; --input-focus:#eaf2f8;
     --btn-bg:#d7e3ee; --btn-text:#011631; --header-grad:linear-gradient(to bottom,#0b395d 0%,#062f4f 45%,#011631 100%);
     --title-grad:linear-gradient(to bottom,#0b395d,#062f4f); --nav-bg:#011631; --strip-bg:#011631;
-    --mark-bg:#ffffff; --mark-text:#062f4f; --hover-border:#00aeef;
+    --mark-bg:#062f4f; --mark-text:#eaf2f8; --hover-border:#00aeef;
   }
   /* CTP-EOS MEDIUM — bg #9db8cc, panels #d7e3ee, primary #0b395d, text #011631 */
   :root[data-theme="eos-medium"]{
@@ -541,7 +541,7 @@
     --border-soft:#4e6875; --border-faint:#6b879b; --input-bg:#9ab9cf; --input-focus:#aecbdc;
     --btn-bg:#9ab9cf; --btn-text:#12283b; --header-grad:linear-gradient(to bottom,#4e6875 0%,#3a5364 45%,#243a4c 100%);
     --title-grad:linear-gradient(to bottom,#3a5364,#294155); --nav-bg:#12283b; --strip-bg:#12283b;
-    --mark-bg:#aecbdc; --mark-text:#12283b; --hover-border:#12283b;
+    --mark-bg:#12283b; --mark-text:#ffffff; --hover-border:#12283b;
   }
   /* FREY MEDIUM DARK — darker backgrounds #3A5364 / #4E6875, panels #3A5364, text #AECBDC / #9AB9CF */
   :root[data-theme="frey-medium-dark"]{
